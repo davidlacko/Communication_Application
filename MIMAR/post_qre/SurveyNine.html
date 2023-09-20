@@ -1,0 +1,213 @@
+{{ block title }}
+    
+{{ endblock }}
+{{ block content }}
+
+<style>
+table.TheTable td.buttonGroup{
+    width: 70px;
+    height: 100px;
+    display: inline-block;
+}
+
+td {
+  width: 80px;
+  height: 100px;
+}
+
+div .labelWrap{
+    display: block;
+    text-align: center;
+    margin: 0 0.2em;
+    height: 50px;
+}
+
+div .buttonWrap {
+    display: block;
+    text-align: center;
+    margin: 0.5em auto;
+    height: 30px;
+}
+
+</style>
+
+<p>V následující části prosím vyjádřete na sedmibodové stupnici (1 = rozhodně nesouhlasím, 7 = rozhodně souhlasím) svůj souhlas či nesouhlas s několika tvrzeními.</p>
+
+<table>
+    <em>{{ form.accult_stra_a5.label }}</em>
+    <tr>
+      {{ for choice in form.accult_stra_a5}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.accult_stra_b3.label }}</em>
+    <tr>
+      {{ for choice in form.accult_stra_b3}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.accult_stra_b7.label }}</em>
+    <tr>
+      {{ for choice in form.accult_stra_b7}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.accult_stra_a1.label }}</em>
+    <tr>
+      {{ for choice in form.accult_stra_a1}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.accult_stra_a3.label }}</em>
+    <tr>
+      {{ for choice in form.accult_stra_a3}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.accult_stra_a7.label }}</em>
+    <tr>
+      {{ for choice in form.accult_stra_a7}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.accult_stra_b4.label }}</em>
+    <tr>
+      {{ for choice in form.accult_stra_b4}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.accult_stra_b2.label }}</em>
+    <tr>
+      {{ for choice in form.accult_stra_b2}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.accult_stra_a4.label }}</em>
+    <tr>
+      {{ for choice in form.accult_stra_a4}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.accult_stra_b6.label }}</em>
+    <tr>
+      {{ for choice in form.accult_stra_b6}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.accult_stra_b5.label }}</em>
+    <tr>
+      {{ for choice in form.accult_stra_b5}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.accult_stra_a2.label }}</em>
+    <tr>
+      {{ for choice in form.accult_stra_a2}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.accult_stra_b1.label }}</em>
+    <tr>
+      {{ for choice in form.accult_stra_b1}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.accult_stra_a6.label }}</em>
+    <tr>
+      {{ for choice in form.accult_stra_a6}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+
+<div class="row">
+    <div class="col">
+        <div class="text-end">
+            <button class="otree-btn-next btn-lg btn-primary">Další</button>
+        </div>
+    </div>
+</div>
+
+{{ endblock }}

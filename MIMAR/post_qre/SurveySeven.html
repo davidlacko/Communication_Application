@@ -1,0 +1,53 @@
+{{ block title }}
+
+{{ endblock }}
+{{ block content }}
+
+<p>Na stupnici od 0 (= chladné pocity) do 100 (= vřelé pocity) uveďte, prosím, své pocity vůči:</p>
+
+    <style>
+        .mgslider-wrapper {
+            border-spacing: 10px;
+        }
+        .mgslider-limit {
+            width: 10%;
+            min-width: 75px;
+            height: 40px;
+            margin: 100px;
+            text-align: center;
+            background: #eee;
+            border: 1px solid #888;
+        }
+        .mgslider-limit, .mgslider-value {
+            font-variant-numeric: tabular-nums;
+        }
+        .mgslider-before {
+            height: 16px;
+            width: 100%;
+            background: #1e5bff;
+        }
+    </style>
+
+    {{ formfield_errors 'Vietnam2' }}
+
+<p><em>Vietnamcům/Vietnamkám žijícím v České republice</em></p>
+    <div id="slider"></div>
+
+    <script src="{{ static 'mgslider.js' }}"></script>
+
+    <script>
+        $(document).ready(function (event) {
+            slider = new mgslider("Vietnam2", 0, 100, 1);
+            slider.print(document.getElementById("slider"));
+        });
+    </script>
+
+<div class="row">
+    <div class="col">
+        <div class="text-end">
+            <button class="otree-btn-next btn-lg btn-primary">Další</button>
+        </div>
+    </div>
+</div>
+
+{{ endblock }}

@@ -1,0 +1,50 @@
+{{ block title }}
+    Informace o účastníkovi
+{{ endblock }}
+{{ block content }}
+<style>
+table.TheTable td.buttonGroup{
+    width: 70px;
+    display: inline-block;
+}
+td {
+  width: 70px;
+}
+div .labelWrap{
+    display: block;
+    text-align: center;
+    margin: 0 0.2em;
+}
+div .buttonWrap {
+    display: block;
+    text-align: center;
+    margin: 0.5em auto;
+}
+</style>
+<p>Odpovězte prosím na několik následujících otázek, které nám ulehčí vybrat Vám vhodného komunikačního partnera/vhodnou komunikační partnerku:</p>
+    <em>{{ formfield player.age }}</em>
+    <em>{{ formfield player.gender }}</em>
+    <em>{{ formfield player.education }}</em>
+    <em>{{ formfield player.etnicity }}</em>
+    <em>{{ formfield player.religion }}</em>
+<table>
+    <em>{{ form.politics.label }}</em>
+    <tr>
+      {{ for choice in form.politics}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+
+<div class="row">
+    <div class="col">
+        <div class="text-end">
+            <button class="otree-btn-next btn-lg btn-primary">Další</button>
+        </div>
+    </div>
+</div>
+
+{{ endblock }}

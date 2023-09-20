@@ -1,0 +1,111 @@
+{{ block title }}
+Zajímavosti o sociální skupině Vašeho partnera/Vaší partnerky
+{{ endblock }}
+{{ block content }}
+<style>
+.image {
+display: inline-block;
+margin-right: 100px;
+margin-bottom: 20px;
+margin-top: 20px;
+margin-left: 100px;
+}
+figcaption {
+    text-align: center;
+}
+
+</style>
+
+<p>Zajímají nás různé sociální skupiny žijící v České republice. Pro účely našeho výzkumu je důležité, aby měl každý alespoň minimální povědomí o skupině, do které patří jeho/její komunikační partner/ka. Proto jsme připravili několik údajů srovnávajících tyto skupiny s obecnou českou populací.<p/>
+<p>Váš komunikační partner/Vaše komunikační partnerka patří do <b>vietnamské menšiny v ČR.</b><p/>
+<p></p>Věděl/a jste, že:</p>
+<li>Vietnamci pracují v průměru 54,41 hodin a Češi 41,31 hodin týdně?</li>
+<div id="banner" style="overflow: hidden; display: inline-block;">
+        <div class="image" style="max-width: 20%; max-height: 20%;">
+            <img src ="{{ static 'images/hours.jpg' }}" eight="200px" width="200px">
+            <figcaption>Vietnamci</figcaption>
+        </div>
+
+        <div class="image" style="max-width: 20%; max-height: 20%;">
+            <img src ="{{ static 'images/hours.jpg' }}" eight="150px" width="150px">
+            <figcaption>Češi</figcaption>
+        </div>
+</div>
+<br>
+<li>Vietnamci si v průměru vydělají 50 021 Kč měsíčně, Češi 42 989 Kč měsíčně?</li>
+<div id="banner" style="overflow: hidden; display: inline-block;">
+        <div class="image" style="max-width: 20%; max-height: 20%;">
+            <img src ="{{ static 'images/money.jpg' }}" eight="200px" width="200px">
+            <figcaption>Vietnamci</figcaption>
+        </div>
+
+        <div class="image" style="max-width: 20%; max-height: 20%;">
+            <img src ="{{ static 'images/money.jpg' }}" eight="150px" width="150px">
+            <figcaption>Češi</figcaption>
+        </div>
+</div>
+<br>
+<li>Vietnamci mají v průměru 1,70 dítěte a Češi 1,71?</li>
+<div id="banner" style="overflow: hidden; display: inline-block;">
+        <div class="image" style="max-width: 20%; max-height: 20%;">
+            <img src ="{{ static 'images/children.jpg' }}" eight="200px" width="200px">
+            <figcaption>Vietnamci</figcaption>
+        </div>
+
+        <div class="image" style="max-width: 20%; max-height: 20%;">
+            <img src ="{{ static 'images/children.jpg' }}" eight="200px" width="200px">
+            <figcaption>Češi</figcaption>
+        </div>
+</div>
+<br>
+<li>Vietnamci se v průměru dožívají 79,22 let a Češi 79,13 let?</li>
+<div id="banner" style="overflow: hidden; display: inline-block;">
+        <div class="image" style="max-width: 20%; max-height: 20%;">
+            <img src ="{{ static 'images/age.jpg' }}" eight="200px" width="200px">
+            <figcaption>Vietnamci</figcaption>
+        </div>
+
+        <div class="image" style="max-width: 20%; max-height: 20%;">
+            <img src ="{{ static 'images/age.jpg' }}" eight="200px" width="200px">
+            <figcaption>Češi</figcaption>
+        </div>
+</div>
+<br>
+<li>Na základních školách mají vietnamské děti průměrný prospěch 1,31 a české děti 1,72?</li>
+<div id="banner" style="overflow: hidden; display: inline-block;">
+        <div class="image" style="max-width: 20%; max-height: 20%;">
+            <img src ="{{ static 'images/education.jpg' }}" eight="200px" width="200px">
+            <figcaption>Vietnamci</figcaption>
+        </div>
+
+        <div class="image" style="max-width: 20%; max-height: 20%;">
+            <img src ="{{ static 'images/education.jpg' }}" eight="150px" width="150px">
+            <figcaption>Češi</figcaption>
+        </div>
+</div>
+<br>
+<li>Vietnamci kupují svou první nemovitost v průměru ve věku 31,12 let a Češi ve věku 34,42 let?</li>
+<div id="banner" style="overflow: hidden; display: inline-block;">
+        <div class="image" style="max-width: 20%; max-height: 20%;">
+            <img src ="{{ static 'images/living.jpg' }}" eight="200px" width="200px">
+            <figcaption>Vietnamci</figcaption>
+        </div>
+
+        <div class="image" style="max-width: 20%; max-height: 20%;">
+            <img src ="{{ static 'images/living.jpg' }}" eight="150px" width="150px">
+            <figcaption>Češi</figcaption>
+        </div>
+</div>
+<br>
+<p> <small>Zdroje: https://www.czso.cz, https://cvvm.soc.cas.cz/cz/. </small></p>
+<br>
+
+<div class="row">
+    <div class="col">
+        <div class="text-end">
+            <button class="otree-btn-next btn-lg btn-primary">Další</button>
+        </div>
+    </div>
+</div>
+
+{{ endblock }}

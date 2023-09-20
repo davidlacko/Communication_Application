@@ -1,0 +1,99 @@
+{{ block title }}
+    
+{{ endblock }}
+{{ block content }}
+
+<style>
+table.TheTable td.buttonGroup{
+    width: 70px;
+    display: inline-block;
+}
+
+td {
+  width: 100px;
+}
+
+div .labelWrap{
+    display: block;
+    text-align: center;
+    margin: 0 0.2em;
+}
+
+div .buttonWrap {
+    display: block;
+    text-align: center;
+    margin: 0.5em auto;
+}
+</style>
+
+<table>
+    <em>{{ form.contact_freq.label }}</em>
+    <tr>
+      {{ for choice in form.contact_freq}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.contact_pos.label }}</em>
+    <tr>
+      {{ for choice in form.contact_pos}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.contact_neg.label }}</em>
+    <tr>
+      {{ for choice in form.contact_neg}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.contact_mass_pos.label }}</em>
+    <tr>
+      {{ for choice in form.contact_mass_pos}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.contact_mass_neg.label }}</em>
+    <tr>
+      {{ for choice in form.contact_mass_neg}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+    <em>{{ formfield player.contact_freq2 }}</em>
+
+<div class="row">
+    <div class="col">
+        <div class="text-end">
+            <button class="otree-btn-next btn-lg btn-primary">Další</button>
+        </div>
+    </div>
+</div>
+
+{{ endblock }}

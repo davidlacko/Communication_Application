@@ -1,0 +1,149 @@
+{{ block title }}
+    
+{{ endblock }}
+{{ block content }}
+
+<style>
+table.TheTable td.buttonGroup{
+    width: 70px;
+    display: inline-block;
+}
+
+td {
+  width: 80px;
+}
+
+div .labelWrap{
+    display: block;
+    text-align: center;
+    margin: 0 0.2em;
+}
+
+div .buttonWrap {
+    display: block;
+    text-align: center;
+    margin: 0.5em auto;
+}
+</style>
+
+
+<p>Na sedmibodové stupnici od 1 (vůbec ne) do 7 (velmi) uveďte, do jaké míry ve Vás Vietnamci/Vietnamky vyvolávají potřebu:</p>
+
+<table>
+    <em>{{ form.behav_tend3.label }}</em>
+    <tr>
+      {{ for choice in form.behav_tend3}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.behav_tend5.label }}</em>
+    <tr>
+      {{ for choice in form.behav_tend5}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.behav_tend1.label }}</em>
+    <tr>
+      {{ for choice in form.behav_tend1}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.behav_tend9.label }}</em>
+    <tr>
+      {{ for choice in form.behav_tend9}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.behav_tend7.label }}</em>
+    <tr>
+      {{ for choice in form.behav_tend7}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.behav_tend2.label }}</em>
+    <tr>
+      {{ for choice in form.behav_tend2}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.behav_tend4.label }}</em>
+    <tr>
+      {{ for choice in form.behav_tend4}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.behav_tend8.label }}</em>
+    <tr>
+      {{ for choice in form.behav_tend8}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.behav_tend6.label }}</em>
+    <tr>
+      {{ for choice in form.behav_tend6}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+
+<div class="row">
+    <div class="col">
+        <div class="text-end">
+            <button class="otree-btn-next btn-lg btn-primary">Další</button>
+        </div>
+    </div>
+</div>
+
+{{ endblock }}

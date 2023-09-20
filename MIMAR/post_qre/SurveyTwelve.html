@@ -1,0 +1,80 @@
+{{ block title }}
+    
+{{ endblock }}
+{{ block content }}
+
+<style>
+table.TheTable td.buttonGroup{
+    width: 70px;
+    height: 100px;
+    display: inline-block;
+}
+
+td {
+  width: 80px;
+  height: 100px;
+}
+
+div .labelWrap{
+    display: block;
+    text-align: center;
+    margin: 0 0.2em;
+    height: 50px;
+}
+
+div .buttonWrap {
+    display: block;
+    text-align: center;
+    margin: 0.5em auto;
+    height: 30px;
+}
+
+</style>
+
+<table>
+    <em>{{ form.interaction3.label }}</em>
+    <tr>
+      {{ for choice in form.interaction3}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.interaction4.label }}</em>
+    <tr>
+      {{ for choice in form.interaction4}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+<table>
+    <em>{{ form.interaction5.label }}</em>
+    <tr>
+      {{ for choice in form.interaction5}}
+      <td class="buttonGroup">
+        <div class="buttonWrap"> {{ choice }} </div>
+        <div class="labelWrap"> {{ choice.label }} </div>
+      </td>
+      {{ endfor }}
+    </tr>
+</table>
+<br>
+    <em>{{ formfield player.open_interaction2 }}</em>
+
+<div class="row">
+    <div class="col">
+        <div class="text-end">
+            <button class="otree-btn-next btn-lg btn-primary">Další</button>
+        </div>
+    </div>
+</div>
+
+{{ endblock }}

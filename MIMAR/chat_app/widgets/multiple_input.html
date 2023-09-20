@@ -1,0 +1,52 @@
+{% with id=widget.attrs.id %}
+
+    <table class="table text-center">
+        {% if top_row %}
+            <tr>
+                {% for  group, options, index in widget.optgroups %}
+                    <td style="width: {{ col_width|safe }}%">
+                        {% if forloop.first %} {{ top_row.0 }}{% endif %}
+                        {% if forloop.last %} {{ top_row.1 }}{% endif %}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endif %}
+        <tr>
+            {% for group, options, index in widget.optgroups %}
+
+                <td>
+                    {% for option in options %}
+
+                        {% include option.template_name with widget=option %}
+
+                    {% endfor %}
+                </td>
+
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for group, options, index in widget.optgroups %}
+
+                <td style="width: {{ col_width|safe }}%">
+                    {% for option in options %}
+                        {% with o=option %}
+                            <label{% if o.attrs.id %} for="{{ o.attrs.id }}"{% endif %}>{{ o.label }}</label>
+
+                        {% endwith %}
+                    {% endfor %}
+                </td>
+
+            {% endfor %}
+        </tr>
+        {% if bottom_row|safe %}
+            <tr>
+                {% for  group, options, index in widget.optgroups %}
+                    <td style="width: {{ col_width }}%">
+                        {% if forloop.first %} {{ bottom_row.0 }}{% endif %}
+                        {% if forloop.last %} {{ bottom_row.1 }}{% endif %}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endif %}
+    </table>
+{% endwith %}

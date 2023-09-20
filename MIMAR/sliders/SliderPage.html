@@ -1,0 +1,102 @@
+{{ block title }}
+    Postoje
+{{ endblock }}
+{{ block content }}
+    <style>
+        .mgslider-wrapper {
+            border-spacing: 10px;
+        }
+        .mgslider-limit {
+            width: 10%;
+            min-width: 75px;
+            height: 40px;
+            margin: 100px;
+            text-align: center;
+            background: #eee;
+            border: 1px solid #888;
+        }
+        .mgslider-limit, .mgslider-value {
+            font-variant-numeric: tabular-nums;
+        }
+        .mgslider-before {
+            height: 16px;
+            width: 100%;
+            background: #1e5bff;
+        }
+    </style>
+<p>Nejdříve nás zajímají Vaše pocity vůči několika společenským skupinám.</p>
+<p>Na stupnici od 0 (= chladné pocity) do 100 (= vřelé pocity) uveďte, prosím, své pocity vůči:</p>
+    {{ formfield_errors 'Roma' }}
+    {{ formfield_errors 'Vietnam' }}
+    {{ formfield_errors 'Slovak' }}
+    {{ formfield_errors 'Czech' }}
+    {{ formfield_errors 'Left' }}
+    {{ formfield_errors 'Right' }}
+    {{ formfield_errors 'Christ' }}
+    {{ formfield_errors 'Muslim' }}
+    {{ formfield_errors 'Buddhism' }}
+    {{ formfield_errors 'Atheist' }}
+<p><em>Romům/Romkám žijícím v České republice</em></p>
+    <div id="slider1"></div>
+<p><em>Vietnamcům/Vietnamkám žijícím v České republice</em></p>
+    <div id="slider2"></div>
+<p><em>Slovákům/Slovenkám žijícím v České republice</em></p>
+    <div id="slider3"></div>
+<p><em>České většině</em></p>
+    <div id="slider4"></div>
+<p><em>Příznivcům/příznivkyním levice</em></p>
+    <div id="slider5"></div>
+<p><em>Příznivcům/příznivkyním pravice</em></p>
+    <div id="slider6"></div>
+<p><em>Křesťanům/Křesťankám</em></p>
+    <div id="slider7"></div>
+<p><em>Muslimům/Muslimkám</em></p>
+    <div id="slider8"></div>
+<p><em>Budhistům/Budhistkám</em></p>
+    <div id="slider9"></div>
+<p><em>Ateistům/Ateistikám</em></p>
+    <div id="slider10"></div>
+    <script src="{{ static 'mgslider.js' }}"></script>
+    <script>
+        $(document).ready(function (event) {
+            slider1 = new mgslider("Roma", 0,100, 1);
+            slider1.print(document.getElementById("slider1"));
+
+            slider2 = new mgslider("Vietnam", 0, 100, 1);
+            slider2.print(document.getElementById("slider2"));
+
+            slider3 = new mgslider("Slovak", 0, 100, 1);
+            slider3.print(document.getElementById("slider3"));
+
+            slider4 = new mgslider("Czech", 0, 100, 1);
+            slider4.print(document.getElementById("slider4"));
+
+            slider5 = new mgslider("Left", 0, 100, 1);
+            slider5.print(document.getElementById("slider5"));
+
+            slider6 = new mgslider("Right", 0, 100, 1);
+            slider6.print(document.getElementById("slider6"));
+
+            slider7 = new mgslider("Christ", 0, 100, 1);
+            slider7.print(document.getElementById("slider7"));
+
+            slider8 = new mgslider("Muslim", 0, 100, 1);
+            slider8.print(document.getElementById("slider8"));
+
+            slider9 = new mgslider("Buddhism", 0, 100, 1);
+            slider9.print(document.getElementById("slider9"));
+
+            slider10 = new mgslider("Atheist", 0, 100, 1);
+            slider10.print(document.getElementById("slider10"));
+        });
+    </script>
+
+<div class="row">
+    <div class="col">
+        <div class="text-end">
+            <button class="otree-btn-next btn-lg btn-primary">Další</button>
+        </div>
+    </div>
+</div>
+
+{{ endblock }}
